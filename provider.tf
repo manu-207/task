@@ -1,4 +1,5 @@
 provider "aws" {
+  region = var.region
 }
 resource "aws_vpc" "main" {
   cidr_block                = "${var.vpc_cidr}"
@@ -6,7 +7,7 @@ resource "aws_vpc" "main" {
   enable_dns_support        = "${var.enable_dns}"
 
   tags {
-    Name                    = "tf-${var.vpc_name}"
+    Name                    = var.vpc_name
   }
 }
 

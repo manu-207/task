@@ -14,3 +14,7 @@ variable "enable_dns" {
  
   description                               = "enable/disable DNS support in the VPC"
 }
+variable "region" {
+ 
+  description                               = "this the region belongs to "
+}
